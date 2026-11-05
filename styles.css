@@ -1,0 +1,106 @@
+:root {
+  color-scheme: light;
+  --ink: #202820;
+  --green: #24543c;
+  --paper: #fffef9;
+  --muted: #576357;
+  --line: #d7ddcf;
+  --tint: #f0f2e9;
+  --gold: #f1d778;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.7;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: var(--green); text-underline-offset: .25em; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, summary:focus-visible { outline: 3px solid #aa7918; outline-offset: 5px; }
+h1, h2, h3, h4, p { margin-top: 0; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: 400; line-height: 1.1; }
+h2 { font-size: clamp(2.2rem, 5vw, 3.8rem); margin-bottom: 1.5rem; }
+h3 { font-size: 1.2rem; line-height: 1.4; }
+h4 { font-size: 1.08rem; line-height: 1.5; margin-bottom: .35rem; }
+section[id] { scroll-margin-top: 2rem; }
+.container { width: min(1120px, 90%); margin-inline: auto; }
+.section { padding-block: 5.5rem; }
+.tinted { background: var(--tint); }
+.eyebrow { text-transform: uppercase; letter-spacing: .16em; font-size: .75rem; font-weight: 750; margin-bottom: 1.5rem; }
+.intro { max-width: 780px; font-size: 1.12rem; }
+.meta { color: var(--muted); font-size: .9rem; }
+.skip-link { position: absolute; top: -100px; left: 1rem; z-index: 5; padding: 1rem; background: white; }
+.skip-link:focus { top: 1rem; }
+.site-header { display: flex; align-items: center; justify-content: space-between; gap: 2rem; padding: 1.5rem 5%; border-top: 5px solid var(--green); }
+.brand { color: var(--ink); text-decoration: none; font-size: 1.5rem; font-weight: 850; letter-spacing: .08em; line-height: 1.25; }
+.brand span { display: block; font-size: .65rem; letter-spacing: .22em; font-weight: 600; }
+nav { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+.site-header nav a { font-size: .82rem; font-weight: 650; color: var(--ink); text-decoration: none; }
+.site-header nav a:hover { text-decoration: underline; }
+.hero { position: relative; overflow: hidden; background: var(--green); color: var(--paper); padding-block: 6rem; }
+.hero .container { position: relative; z-index: 1; }
+.hero h1 { font-size: clamp(3rem, 8vw, 7rem); margin-bottom: .75rem; letter-spacing: -.04em; }
+.hero h1 em { color: var(--gold); }
+.hero-subtitle { font-size: 1.5rem; }
+.hero-mark { position: absolute; right: 6%; top: -2rem; font: 32rem/1 Georgia, serif; color: #ffffff0a; pointer-events: none; }
+.hero-mark span { display: block; font: 1.25rem system-ui, sans-serif; letter-spacing: 1em; text-align: center; }
+.button { display: inline-flex; gap: 2rem; align-items: center; padding: .8rem 1.4rem; margin-top: .75rem; color: var(--paper); background: var(--green); border: 1px solid var(--green); text-decoration: none; font-weight: 650; }
+.hero .button { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+.button:hover { filter: brightness(1.1); }
+.months { margin-block: 2rem; padding-block: 1rem; border-block: 1px solid var(--line); }
+.months a { font-size: .9rem; font-weight: 650; }
+.month { display: grid; grid-template-columns: 180px 1fr; gap: 0 2rem; border-bottom: 1px solid var(--line); padding-block: 1.5rem; }
+.month > h3 { grid-row: 1 / span 4; color: var(--green); }
+.event { display: grid; grid-template-columns: 110px 1fr; gap: 1.25rem; padding-block: .5rem; }
+.event time { font-size: .85rem; font-weight: 700; padding-top: .15rem; }
+.event p { margin-bottom: .5rem; }
+.legend { margin-top: 1.5rem; color: var(--muted); font-size: .9rem; }
+summary { cursor: pointer; font-weight: 650; }
+.legend p { margin-block: 1rem; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+.cards article { border-top: 2px solid var(--green); padding-top: 1rem; }
+.card-number { color: var(--green); font-size: .8rem; }
+.cards h3 { margin-top: 1rem; }
+.join { max-width: 800px; border-top: 1px solid var(--line); margin-top: 2rem; padding-top: 2rem; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+.text-link { font-weight: 700; }
+.photo-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem 2rem; margin-top: 2rem; }
+.photo-links a { border-bottom: 1px solid var(--line); padding-block: .75rem; font-size: .9rem; }
+.numbers { color: var(--paper); background: var(--green); padding-block: 3rem; }
+.numbers .container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; }
+.numbers p { margin: 0; font-size: .85rem; }
+.numbers strong { display: block; font: 3rem Georgia, serif; color: var(--gold); margin-bottom: .5rem; }
+address { font-style: normal; }
+.transport { margin: 0; }
+.transport div { margin-bottom: 1.25rem; }
+dt { font-weight: 700; }
+dd { margin: 0; color: var(--muted); }
+.contact { background: var(--tint); }
+.email { display: inline-block; font-size: clamp(1.25rem, 4vw, 2.5rem); margin-block: .5rem 1.5rem; }
+footer { padding-block: 3rem; }
+.peace { font: italic 1.8rem Georgia, serif; color: var(--green); }
+@media (max-width: 850px) {
+  .site-header { align-items: flex-start; flex-direction: column; gap: 1.25rem; }
+  .site-header nav { gap: .6rem 1.25rem; }
+  .month { grid-template-columns: 1fr; }
+  .month > h3 { grid-row: auto; }
+  .cards { gap: 1.25rem; }
+  .photo-links { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 550px) {
+  .section { padding-block: 3.5rem; }
+  .hero { padding-block: 4rem; }
+  .hero-mark { right: -5rem; }
+  .cards, .columns, .photo-links { grid-template-columns: 1fr; }
+  .columns { gap: 1.5rem; }
+  .event { grid-template-columns: 1fr; gap: .25rem; padding-block: .75rem; }
+  .numbers .container { grid-template-columns: repeat(2, 1fr); }
+}
+@media print {
+  .site-header nav, .skip-link, .button, .hero-mark, .months { display: none; }
+  .section, .hero { padding-block: 1.5rem; }
+  .hero, .numbers, .tinted, .contact { color: #000; background: white; }
+  .hero h1 em, .numbers strong { color: #000; }
+  .hero h1 { font-size: 3rem; }
+  .event { break-inside: avoid; }
+}
